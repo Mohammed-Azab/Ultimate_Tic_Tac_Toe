@@ -1,4 +1,4 @@
-package game.engine;
+package game.Utility;
 
 public enum CellState {
     X("X"),
