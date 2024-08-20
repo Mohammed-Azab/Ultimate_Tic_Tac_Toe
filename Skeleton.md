@@ -1,7 +1,7 @@
 UltimateTicTacToe/
 │
 ├── src/
-│   ├── engine.Main.java            # engine.Main game loop and entry point
+│   ├── game.engine.Main.java            # game.engine.Main game loop and entry point
 │   ├── game/
 │   │   ├── Game.java        # Game class implementation
 │   │   ├── Board.java       # Board class implementation
@@ -11,7 +11,7 @@ UltimateTicTacToe/
 │   ├── utils/
 │   │   └── Utils.java       # Utility functions and constants
 │   └── gui/
-│       ├── GameWindow.java  # GUI for the game window
+│       ├── GameWindow.java  # game.engine.GUI for the game window
 │       └── Renderer.java    # Renderer for visual representation (if applicable)
 │
 ├── assets/                 # Assets like images or stylesheets for the game
