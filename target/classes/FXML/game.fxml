@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<AnchorPane prefHeight="690.0" prefWidth="619.0" styleClass="background" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.GUI.GUIController">
+   <children>
+      <Rectangle fx:id="r1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="14.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="229.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="441.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r4" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="14.0" layoutY="258.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r8" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="227.0" layoutY="494.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r9" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="441.0" layoutY="494.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r11" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="69.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r12" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="125.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r13" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="14.0" layoutY="82.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r14" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="70.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r15" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="123.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r16" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="13.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r17" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="69.0" layoutY="142.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r18" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="125.0" layoutY="142.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r21" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="283.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r22" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="338.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r23" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="229.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r24" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="283.0" layoutY="81.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r25" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="338.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r26" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="229.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r27" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="283.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r28" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="338.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r31" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="496.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r32" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="551.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r33" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="441.0" layoutY="84.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r34" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="496.0" layoutY="82.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r35" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="551.0" layoutY="82.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r36" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="441.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r37" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="496.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r38" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="551.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r41" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="70.0" layoutY="258.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r42" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="123.0" layoutY="258.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r43" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="14.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r44" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="69.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r45" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="125.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r46" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="14.0" layoutY="377.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r47" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="70.0" layoutY="377.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r48" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="125.0" layoutY="377.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r5" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="229.0" layoutY="258.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r51" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="281.0" layoutY="258.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r52" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="338.0" layoutY="258.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r53" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="229.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r54" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="283.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r55" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="338.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r56" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="229.0" layoutY="377.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r57" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="283.0" layoutY="377.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r58" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="338.0" layoutY="377.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r6" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="441.0" layoutY="258.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r61" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="496.0" layoutY="258.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r62" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="551.0" layoutY="258.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r63" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="441.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r64" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="496.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r65" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="551.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r66" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="441.0" layoutY="377.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r67" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="496.0" layoutY="377.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r68" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="551.0" layoutY="377.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r7" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="14.0" layoutY="494.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r71" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="69.0" layoutY="494.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r72" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="123.0" layoutY="494.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r75" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="125.0" layoutY="553.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r73" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="13.0" layoutY="553.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r74" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="69.0" layoutY="553.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r76" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="14.0" layoutY="612.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r77" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="69.0" layoutY="612.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r78" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="123.0" layoutY="612.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r81" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="283.0" layoutY="494.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r82" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="338.0" layoutY="494.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r83" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="227.0" layoutY="553.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r84" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="281.0" layoutY="553.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r85" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="338.0" layoutY="553.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r86" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="227.0" layoutY="612.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r87" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="283.0" layoutY="612.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r88" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="338.0" layoutY="612.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r91" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="496.0" layoutY="494.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r92" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="551.0" layoutY="494.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r93" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="441.0" layoutY="553.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r94" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="496.0" layoutY="553.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r95" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="551.0" layoutY="553.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r96" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="441.0" layoutY="612.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r97" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="496.0" layoutY="612.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <Rectangle fx:id="r98" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="59.0" layoutX="551.0" layoutY="612.0" stroke="BLACK" strokeType="INSIDE" styleClass="transparent-square-hover" visible="false" width="55.0" />
+      <ImageView fx:id="C" fitHeight="227.0" fitWidth="200.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="C1" fitHeight="227.0" fitWidth="200.0" layoutX="209.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="C2" fitHeight="227.0" fitWidth="200.0" layoutX="419.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="C3" fitHeight="227.0" fitWidth="200.0" layoutX="1.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="C4" fitHeight="227.0" fitWidth="200.0" layoutX="209.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="C5" fitHeight="227.0" fitWidth="200.0" layoutX="419.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="C6" fitHeight="215.0" fitWidth="200.0" layoutX="1.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="C7" fitHeight="227.0" fitWidth="200.0" layoutX="209.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="C8" fitHeight="227.0" fitWidth="200.0" layoutX="419.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/background.css" />
+      <URL value="@../CSS/rectangleStyle.css" />
+   </stylesheets>
+</AnchorPane>

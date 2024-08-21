@@ -1,8 +1,9 @@
-package game.Utility;
+package game.entity;
 
 public enum Mark {
     X,
-    O;
+    O,
+    EMPTY;
 
     @Override
     public String toString() {
@@ -11,6 +12,8 @@ public enum Mark {
                 return "X";
             case O:
                 return "O";
+                case EMPTY:
+                    return "Empty";
             default:
                 throw new AssertionError("Unknown mark: " + this);
         }

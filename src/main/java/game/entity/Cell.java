@@ -1,4 +1,4 @@
-package game.Utility;
+package game.entity;
 
 public class Cell {
     private CellState state;
@@ -15,10 +15,17 @@ public class Cell {
     public void setState(CellState state) {
         this.state = state;
     }
+
     public int getNumber() {
         return number;
     }
+
     public void setNumber(int number) {
         this.number = number;
     }
+
+    public boolean isOccupied() {
+        return state != CellState.EMPTY;
+    }
+
 }

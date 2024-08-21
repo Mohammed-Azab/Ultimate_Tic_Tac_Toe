@@ -1,4 +1,4 @@
-package game.Utility;
+package game.entity;
 
 public class Player {
     protected String name;

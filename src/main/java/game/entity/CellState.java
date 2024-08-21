@@ -1,4 +1,4 @@
-package game.Utility;
+package game.entity;
 
 public enum CellState {
     X("X"),
