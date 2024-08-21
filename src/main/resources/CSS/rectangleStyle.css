@@ -1,0 +1,11 @@
+.transparent-square {
+    -fx-fill: rgba(255, 255, 255, 0); /* Fully transparent fill */
+    -fx-stroke: black; /* Outline color */
+    -fx-stroke-width: 2; /* Outline width */
+}
+
+.transparent-square-hover {
+    -fx-fill: rgba(0, 255, 0, 0.5); /* Semi-transparent green fill on hover */
+    -fx-stroke: black; /* Optional: outline color on hover */
+    -fx-stroke-width: 2; /* Optional: outline width on hover */
+}
