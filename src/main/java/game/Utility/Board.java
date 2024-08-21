@@ -14,6 +14,7 @@ public class Board {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < size; j++) {
                 cells[i][j] = new Cell();
+                cells[i][j].setNumber((i+1)*10+j); //Cell Number -11 -12 -13 ........
             }
         }
     }
