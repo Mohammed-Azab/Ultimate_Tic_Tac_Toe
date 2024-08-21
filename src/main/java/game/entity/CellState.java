@@ -3,7 +3,8 @@ package game.entity;
 public enum CellState {
     X("X"),
     O("O"),
-    EMPTY(" ");
+    EMPTY(" "),
+    Disabled ("Disabled"),;
 
     private final String symbol;
 
