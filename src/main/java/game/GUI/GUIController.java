@@ -1,11 +1,20 @@
 package game.GUI;
 
 import game.engine.CLIController;
+import game.entity.CellState;
+import game.entity.GameStatus;
+import game.entity.Mark;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 
+import java.io.IOException;
 import java.net.URL;
+import java.time.Year;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class GUIController implements Initializable {
@@ -20,12 +29,146 @@ public class GUIController implements Initializable {
     public Rectangle r71,r72,r73,r74,r75,r76,r77,r78;
     public Rectangle r81,r82,r83,r84,r85,r86,r87,r88;
     public Rectangle r91,r92,r93,r94,r95,r96,r97,r98;
+    public AnchorPane root;
+
+    private CLIController controller;
+    ImageView X;
+    ImageView O;
+    int currentCellNumber;
+    Rectangle [][] rectangles;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        CLIController controller= new CLIController();
+        controller= new CLIController();
+        controller.getPlayer1().setName("Player1");
+        controller.getPlayer2().setName("Player2");
+        controller.getPlayer1().setMark(Mark.X);
+        controller.getPlayer1().setMark(Mark.O);
+        rectangles = new Rectangle[9][9];
+
+        startGameRoutine();
+    }
+    private void startGameRoutine() {
+        while (controller.getGameStatus()==GameStatus.Ongoing){
+            // Alert for which Shape for X,O is wanted
+            // Alert For which player is playing
+            X = new ImageView();
+            O = new ImageView();
+            try {
+                X.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/XRed.png"))));
+                O.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/OBlue.png"))));
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void makeMove(){
+        int i= (currentCellNumber/10)-1;
+        int j= currentCellNumber%10;
+        if (controller.getBoard().getMiniBoard(i,j).getCell(i,j).isOccupied()){
+            return;
+        }
+
+
+
+        if (controller.getBoard().getMiniBoard(i,j).hasWinner()){ // check if the miniBoard has a winner
+            ImageView currentImage = new ImageView();
+            Mark winnerMark= controller.getBoard().getMiniBoard(i,j).getWinnerMark();
+            switch (winnerMark){
+                case X:
+                    currentImage= X; break;
+                    case O:
+                        currentImage= O; break;
+                        default:
+                            break;
+            }
+            changeImage(i-1,currentImage);
+        }
 
 
     }
+
+    private void changeImage(int i,ImageView currentImage){
+        switch (i){
+            case 0:
+                C.setImage(currentImage.getImage()); break;
+                case 1:
+                    C1.setImage(currentImage.getImage()); break;
+                    case 2:
+                        C2.setImage(currentImage.getImage()); break;
+                        case 3:
+                            C3.setImage(currentImage.getImage()); break;
+                            case 4:
+                                C4.setImage(currentImage.getImage()); break;
+                                case 5:
+                                    C5.setImage(currentImage.getImage()); break;
+                                    case 6:
+                                        C6.setImage(currentImage.getImage()); break;
+                                        case 7:
+                                            C7.setImage(currentImage.getImage()); break;
+                                            case 8:
+                                                C8.setImage(currentImage.getImage()); break;
+                                                default:
+                                                    break;
+
+        }
+    }
+
+    public void setCurrentCellNumber(MouseEvent mouseEvent) {
+        Object source = mouseEvent.getSource();
+        int num = -1;
+
+        if (source instanceof Rectangle) {
+            Rectangle clickedRectangle = (Rectangle) source;
+            String rectangleName = clickedRectangle.getId();
+            rectangleName = rectangleName.substring(1);
+            num = Integer.parseInt(rectangleName);
+        }
+        if (num == -1) {
+            return;
+        }
+        currentCellNumber = num;
+    }
+
+
+    public void highlight(MouseEvent mouseEvent) { // on mouse entered
+        int i= (currentCellNumber/10)-1;
+        int j= currentCellNumber%10;
+        if (controller.getBoard().getMiniBoard(i,j).getCell(i,j).isOccupied() ||
+                controller.getBoard().getMiniBoard(i,j).getCell(i,j).getState()== CellState.Disabled){
+            return;
+        }
+        String id= currentCellNumber+"";
+        if (currentCellNumber==0){
+            id="r";
+        }
+        else if (currentCellNumber%10==0){
+            id="r"+currentCellNumber/10;
+        }
+        Rectangle rectangle = (Rectangle) root.lookup("#" + id);
+
+        if (rectangle != null) {
+            rectangle.setVisible(true);
+        }
+    }
+
+    public void resetHighlight(MouseEvent mouseEvent) { // on mouse Exist
+        String id= currentCellNumber+"";
+        if (currentCellNumber==0){
+            id="r";
+        }
+        else if (currentCellNumber%10==0){
+            id="r"+currentCellNumber/10;
+        }
+        Rectangle rectangle = (Rectangle) root.lookup("#" + id);
+
+        if (rectangle != null) {
+            rectangle.setVisible(false);
+        }
+    }
+
+
 }
