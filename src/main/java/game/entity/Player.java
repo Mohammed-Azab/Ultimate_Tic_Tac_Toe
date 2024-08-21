@@ -4,6 +4,7 @@ public class Player {
     protected String name;
     protected int score;
     protected Mark mark;
+    PlayerState playerState;
 
     public Player(String name, Mark mark) {
         this.name = name;
@@ -32,6 +33,13 @@ public class Player {
 
     public boolean isAiPlayer(){
         return false;
+    }
+
+    public PlayerState getPlayerState() {
+        return playerState;
+    }
+    public void setPlayerState(PlayerState playerState) {
+        this.playerState = playerState;
     }
 
 

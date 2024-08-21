@@ -1,9 +1,6 @@
 package game.engine;
 
-import game.entity.AiPlayer;
-import game.entity.Board;
-import game.entity.GameStatus;
-import game.entity.Player;
+import game.entity.*;
 
 public class CLIController {
     GameStatus status= GameStatus.Ongoing;
@@ -15,6 +12,8 @@ public class CLIController {
         player1 = new Player();
         player2 = new Player();
         currentPlayer = player1;
+        player1.setPlayerState(PlayerState.ACTIVE);
+        player2.setPlayerState(PlayerState.INACTIVE);
         board = new Board(3);
     }
     public void makePlayerAi(){
