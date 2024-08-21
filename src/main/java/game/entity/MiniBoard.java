@@ -84,4 +84,16 @@ public class MiniBoard extends Board {
         return false;
     }
 
+    public boolean isEmpty(){
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (cells[i][j].getState() != CellState.EMPTY) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+
 }

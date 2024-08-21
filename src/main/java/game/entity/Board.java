@@ -95,7 +95,7 @@ public class Board {
         return size;
     }
 
-    protected Mark getWinnerMark() {
+    public Mark getWinnerMark() {
         return winnerMark;
     }
 
