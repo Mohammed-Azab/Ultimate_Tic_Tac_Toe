@@ -28,4 +28,15 @@ public class Cell {
         return state != CellState.EMPTY;
     }
 
+    public void putMark(Mark mark) {
+        switch (mark) {
+            case X:
+                state = CellState.X;  break;
+                case O:
+                    state = CellState.O; break;
+                    default:
+                        state = CellState.EMPTY;
+        }
+    }
+
 }

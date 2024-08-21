@@ -1,14 +1,13 @@
 package game.GUI;
 
 import game.engine.CLIController;
-import game.entity.CellState;
-import game.entity.GameStatus;
-import game.entity.Mark;
+import game.entity.*;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.AudioClip;
 import javafx.scene.shape.Rectangle;
 
 import java.io.IOException;
@@ -46,11 +45,12 @@ public class GUIController implements Initializable {
         controller.getPlayer1().setMark(Mark.X);
         controller.getPlayer1().setMark(Mark.O);
         rectangles = new Rectangle[9][9];
-
         startGameRoutine();
+        startEndGameRoutine();
     }
+
     private void startGameRoutine() {
-        while (controller.getGameStatus()==GameStatus.Ongoing){
+        while (controller.getGameStatus()==GameStatus.Ongoing){ // needs to be stated not Game Loop
             // Alert for which Shape for X,O is wanted
             // Alert For which player is playing
             X = new ImageView();
@@ -62,18 +62,58 @@ public class GUIController implements Initializable {
             catch (Exception e) {
                 e.printStackTrace();
             }
+
+
         }
+    }
+
+    private void startEndGameRoutine() {
+        if (controller.getPlayer2().isAiPlayer()){
+            if (controller.getPlayer2().getPlayerState()==PlayerState.WON){
+                playDefeatedSound();
+            }
+            else {
+                playVictorySound();
+            }
+        }
+        else {
+            playVictorySound();
+        }
+
+        // Display who won
     }
 
     private void makeMove(){
         int i= (currentCellNumber/10)-1;
         int j= currentCellNumber%10;
-        if (controller.getBoard().getMiniBoard(i,j).getCell(i,j).isOccupied()){
+        Cell currentCell= controller.getBoard().getMiniBoard(i,j).getCell(i,j);
+        if (currentCell.isOccupied() || currentCell.getState()== CellState.Disabled){
             return;
         }
-
-
-
+        Mark currentMark = controller.getCurrentPlayer().getMark();
+        currentCell.putMark(currentMark);
+        ImageView imageView = new ImageView();
+        switch (currentMark){
+            case X:
+                imageView.setImage(X.getImage()); break;
+                case O:
+                    imageView.setImage(O.getImage()); break;
+                    default:
+                        return;
+        }
+        Rectangle rectangle= getCurrentRectangle();
+        imageView.setX(rectangle.getX());
+        imageView.setY(rectangle.getY());
+        imageView.setLayoutX(rectangle.getLayoutX());
+        imageView.setLayoutY(rectangle.getLayoutY());
+        root.getChildren().add(imageView);
+        root.getChildren().remove(rectangle);
+        playSoundOfPlay();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         if (controller.getBoard().getMiniBoard(i,j).hasWinner()){ // check if the miniBoard has a winner
             ImageView currentImage = new ImageView();
             Mark winnerMark= controller.getBoard().getMiniBoard(i,j).getWinnerMark();
@@ -137,18 +177,11 @@ public class GUIController implements Initializable {
     public void highlight(MouseEvent mouseEvent) { // on mouse entered
         int i= (currentCellNumber/10)-1;
         int j= currentCellNumber%10;
-        if (controller.getBoard().getMiniBoard(i,j).getCell(i,j).isOccupied() ||
-                controller.getBoard().getMiniBoard(i,j).getCell(i,j).getState()== CellState.Disabled){
+        Cell currentCell= controller.getBoard().getMiniBoard(i,j).getCell(i,j);
+        if (currentCell.isOccupied() || currentCell.getState()== CellState.Disabled){
             return;
         }
-        String id= currentCellNumber+"";
-        if (currentCellNumber==0){
-            id="r";
-        }
-        else if (currentCellNumber%10==0){
-            id="r"+currentCellNumber/10;
-        }
-        Rectangle rectangle = (Rectangle) root.lookup("#" + id);
+        Rectangle rectangle = getCurrentRectangle();
 
         if (rectangle != null) {
             rectangle.setVisible(true);
@@ -156,6 +189,14 @@ public class GUIController implements Initializable {
     }
 
     public void resetHighlight(MouseEvent mouseEvent) { // on mouse Exist
+        Rectangle rectangle = getCurrentRectangle();
+
+        if (rectangle != null) {
+            rectangle.setVisible(false);
+        }
+    }
+
+    private Rectangle getCurrentRectangle(){
         String id= currentCellNumber+"";
         if (currentCellNumber==0){
             id="r";
@@ -163,12 +204,25 @@ public class GUIController implements Initializable {
         else if (currentCellNumber%10==0){
             id="r"+currentCellNumber/10;
         }
-        Rectangle rectangle = (Rectangle) root.lookup("#" + id);
-
-        if (rectangle != null) {
-            rectangle.setVisible(false);
-        }
+        return (Rectangle) root.lookup("#" + id);
     }
+
+    private void playSoundOfPlay() {
+        String soundFilePath = "/sounds/click.wav";
+        AudioClip sound = new AudioClip(Objects.requireNonNull(getClass().getResource(soundFilePath)).toString());
+        sound.play();
+    }
+    private void playVictorySound() {
+        String soundFilePath = "/sounds/victory.wav";
+        AudioClip sound = new AudioClip(Objects.requireNonNull(getClass().getResource(soundFilePath)).toString());
+        sound.play();
+    }
+    private void playDefeatedSound() {
+        String soundFilePath = "/sounds/lose.wav";
+        AudioClip sound = new AudioClip(Objects.requireNonNull(getClass().getResource(soundFilePath)).toString());
+        sound.play();
+    }
+
 
 
 }
