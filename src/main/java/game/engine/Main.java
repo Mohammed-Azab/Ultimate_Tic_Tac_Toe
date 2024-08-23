@@ -1,5 +1,6 @@
 package game.engine;
 
+import game.GUI.GUIController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +18,7 @@ public class Main extends Application {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/FXML/game.fxml"));
             Parent root = loader.load();
+            GUIController.mainStage = primaryStage;
             Scene scene = new Scene(root);
             Image icon = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/GameIntroAssest.png")));
             primaryStage.getIcons().add(icon);

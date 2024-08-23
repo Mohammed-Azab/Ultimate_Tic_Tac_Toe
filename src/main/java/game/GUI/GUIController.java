@@ -2,17 +2,22 @@ package game.GUI;
 
 import game.engine.CLIController;
 import game.entity.*;
+import javafx.application.Platform;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.media.AudioClip;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.stage.Window;
 
-import java.io.IOException;
 import java.net.URL;
-import java.time.Year;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -29,6 +34,9 @@ public class GUIController implements Initializable {
     public Rectangle r81,r82,r83,r84,r85,r86,r87,r88;
     public Rectangle r91,r92,r93,r94,r95,r96,r97,r98;
     public AnchorPane root;
+    public static Stage hiddenStage = new Stage();
+    public static Stage mainStage = new Stage();
+    public Label nameToPlay;
 
     private CLIController controller;
     ImageView X;
@@ -45,14 +53,17 @@ public class GUIController implements Initializable {
         controller.getPlayer1().setMark(Mark.X);
         controller.getPlayer1().setMark(Mark.O);
         rectangles = new Rectangle[9][9];
-        startGameRoutine();
-        startEndGameRoutine();
+        setTheAlert(mainStage);
+        //startGameRoutine();
+        //startEndGameRoutine();
     }
 
     private void startGameRoutine() {
         while (controller.getGameStatus()==GameStatus.Ongoing){ // needs to be stated not Game Loop
             // Alert for which Shape for X,O is wanted
             // Alert For which player is playing
+            changePlayerToGo(controller.getCurrentPlayer().getName());
+            doTheInterrupt();
             X = new ImageView();
             O = new ImageView();
             try {
@@ -62,8 +73,13 @@ public class GUIController implements Initializable {
             catch (Exception e) {
                 e.printStackTrace();
             }
-
-
+            Player currentPlayer =controller.getCurrentPlayer();
+            if (currentPlayer==controller.getPlayer1()){
+                currentPlayer= controller.getPlayer2();
+            }
+            else {
+                currentPlayer= controller.getPlayer1();
+            }
         }
     }
 
@@ -79,7 +95,6 @@ public class GUIController implements Initializable {
         else {
             playVictorySound();
         }
-
         // Display who won
     }
 
@@ -127,8 +142,7 @@ public class GUIController implements Initializable {
             }
             changeImage(i-1,currentImage);
         }
-
-
+        releaseTheInterrupt();
     }
 
     private void changeImage(int i,ImageView currentImage){
@@ -157,7 +171,7 @@ public class GUIController implements Initializable {
         }
     }
 
-    public void setCurrentCellNumber(MouseEvent mouseEvent) {
+    public void makeAMove(MouseEvent mouseEvent) {
         Object source = mouseEvent.getSource();
         int num = -1;
 
@@ -171,6 +185,7 @@ public class GUIController implements Initializable {
             return;
         }
         currentCellNumber = num;
+        makeMove();
     }
 
 
@@ -222,6 +237,33 @@ public class GUIController implements Initializable {
         AudioClip sound = new AudioClip(Objects.requireNonNull(getClass().getResource(soundFilePath)).toString());
         sound.play();
     }
+
+    public void setTheAlert(Stage stage){
+        hiddenStage.initOwner(stage);
+        hiddenStage.initStyle(StageStyle.UTILITY);
+        hiddenStage.setOpacity(0);
+        hiddenStage.setX(-10000);
+        hiddenStage.setY(-10000);
+
+        StackPane hiddenRoot = new StackPane();
+        Scene hiddenScene = new Scene(hiddenRoot, 1, 1);
+        hiddenStage.setScene(hiddenScene);
+    }
+
+    private void doTheInterrupt(){
+        hiddenStage.showAndWait();
+    }
+
+    private void releaseTheInterrupt(){
+        hiddenStage.close();
+    }
+
+    private void changePlayerToGo(String name){
+        nameToPlay.setText(name+" To Play");
+    }
+
+
+
 
 
 
