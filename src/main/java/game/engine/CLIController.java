@@ -3,11 +3,11 @@ package game.engine;
 import game.entity.*;
 
 public class CLIController {
-    GameStatus status= GameStatus.Ongoing;
-    private Player player1;
-    private Player player2;
-    private Player currentPlayer;
-    private Board board;
+    protected GameStatus status= GameStatus.Ongoing;
+    protected Player player1;
+    protected Player player2;
+    protected Player currentPlayer;
+    protected Board board;
     public CLIController() {
         player1 = new Player();
         player2 = new Player();

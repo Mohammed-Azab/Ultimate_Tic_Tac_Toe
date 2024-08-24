@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="root" prefHeight="690.0" prefWidth="619.0" styleClass="background" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.GUI.GUIController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.GUI.FxmlController">
    <stylesheets>
       <URL value="@../CSS/background.css"/>
       <URL value="@../CSS/rectangleStyle.css"/>
